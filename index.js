@@ -4,8 +4,8 @@ const fs = require("fs");
 
 const { exec } = require("child_process");
 
-exec( "cd  build-tools && aapt dump badging test.apk ", (a, b, c) => {
-  fs.writeFileSync("test.txt", b);
+exec( "cd  build-tools && ./aapt2 dump badging test.apk ", (a, b, c) => {
+  fs.writeFileSync("apk.txt", b);
 
   var txt = b;
 
